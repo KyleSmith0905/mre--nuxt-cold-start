@@ -1,63 +1,9 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Auth Minimum Reproducible Example
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+The data:
+| Has Auth?[1] | Cold Start 1 | Cold Start 2 | Cold Start 3 | Warm Start 1 | Warm Start 2 | Warm Start 3 |
+|---|---|---|---|---|---|---|
+| Yes | 2.69s | 2.77s | 2.89s | 0.37s | 0.17s | 0.12s |
+| No | 0.38s | 0.20s | 0.18s | 0.05s | 0.05s | 0.07s |
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+1: Has auth indicates that the nuxt.config includes the @sidebase/nuxt-auth module.
